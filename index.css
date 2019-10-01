@@ -5,21 +5,31 @@
 
 body {
 	margin: 0;
+	overflow-x: hidden;
 }
 
 h1 {
 	font-family: 'Bungee Inline', cursive;
-	font-size: 50px;
+	font-size: 35px;
+	margin-top: 20px;
 }
 
-i {
+h2 {
+	font-family: 'Bungee Inline', cursive;
+	font-size: 25px;
+}
+
+em {
+	display: block;
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 40px;
+	margin: 40px 0;
 }
 
 p {
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 20px;
+	line-height: 30px;
 }
 
 .background {
@@ -31,19 +41,18 @@ p {
 	opacity: 0;
 }
 
-.rules {
+.scrollable {
 	height: 100%;
-	overflow-y: scroll;
 }
 
 .text-container {
 	animation: fade-in 1s linear 1.5s 1 forwards;
 	opacity: 0;
+	padding-bottom: 40px;
 }
 
 .video {
 	animation: fade-in 1s linear 1.5s 1 forwards;
-	height: 1080px;
 	max-height: 100vh;
 	opacity: 0;
 }
@@ -53,19 +62,27 @@ p {
 	background-color: #fafca1;
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
 	justify-content: center;
-	position: relative;
-	right: 0;
-	top: 0;
 }
 
-@media not screen and (max-width: 600px) {
+@media not screen and (max-width: 800px) {
+	body {
+		overflow-y: hidden;
+	}
+	
+	#mobile-video {
+		display: none;
+	}
+	
 	.background {
 		display: flex;
 		height: 100vh;
 	}
-
+	
+	.bsuen-logo {
+		width: 200px;
+	}
+	
 	.logo {
 		animation: slide-desktop 1.25s linear 0.25s 1 forwards;
 		height: 232px;
@@ -75,16 +92,40 @@ p {
 		top: calc(50vh - 116px);
 		z-index: 2;
 	}
-
+	
+	.scrollable {
+		overflow-y: scroll;
+	}
+	
 	.text-container {
-		margin: calc(116px + 10vh) 10vw 10vh 10vw;
+		margin: calc(116px + 5vh) 10vw 10vh 10vw;
+	}
+	
+	.video {
+		height: 1080px;
+	}
+	
+	.video-container {
+		height: 100vh;
+		position: relative;
+		right: 0;
+		top: 0;
 	}
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+	#desktop-video {
+		display: none;
+	}
+	
 	.background {
 		display: block;
 		height: 100%;
+		overflow-y: scroll;
+	}
+
+	.bsuen-logo {
+		width: 25vw;
 	}
 
 	.logo {
@@ -98,6 +139,11 @@ p {
 
 	.text-container {
 		margin: 20vh 15vw 0;
+	}
+	
+	.video-container {
+		margin: 0 -15vw;
+		width: 100vw;
 	}
 }
 
