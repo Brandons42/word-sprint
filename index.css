@@ -69,20 +69,20 @@ p {
 	body {
 		overflow-y: hidden;
 	}
-	
+
 	#mobile-video {
 		display: none;
 	}
-	
+
 	.background {
 		display: flex;
 		height: 100vh;
 	}
-	
+
 	.bsuen-logo {
 		width: 200px;
 	}
-	
+
 	.logo {
 		animation: slide-desktop 1.25s linear 0.25s 1 forwards;
 		height: 232px;
@@ -92,19 +92,19 @@ p {
 		top: calc(50vh - 116px);
 		z-index: 2;
 	}
-	
+
 	.scrollable {
 		overflow-y: scroll;
 	}
-	
+
 	.text-container {
 		margin: calc(116px + 5vh) 10vw 10vh 10vw;
 	}
-	
+
 	.video {
 		height: 1080px;
 	}
-	
+
 	.video-container {
 		height: 100vh;
 		position: relative;
@@ -117,7 +117,7 @@ p {
 	#desktop-video {
 		display: none;
 	}
-	
+
 	.background {
 		display: block;
 		height: 100%;
@@ -140,7 +140,7 @@ p {
 	.text-container {
 		margin: 20vh 15vw 0;
 	}
-	
+
 	.video-container {
 		margin: 0 -15vw;
 		width: 100vw;
