@@ -32,23 +32,17 @@ p {
 	line-height: 30px;
 }
 
-.background {
-	background-color: #fafca1;
-	width: 100vw;
-}
-
 .logo {
 	opacity: 0;
 }
 
-.scrollable {
-	height: 100%;
+.padder {
+	height: 30vh;
 }
 
 .text-container {
 	animation: fade-in 1s linear 1.5s 1 forwards;
 	opacity: 0;
-	padding-bottom: 40px;
 }
 
 .video {
@@ -65,18 +59,18 @@ p {
 	justify-content: center;
 }
 
+#background {
+	background-color: #fafca1;
+	width: 100vw;
+}
+
+#scrollable {
+	height: 100%;
+}
+
 @media not screen and (max-width: 800px) {
 	body {
 		overflow-y: hidden;
-	}
-
-	#mobile-video {
-		display: none;
-	}
-
-	.background {
-		display: flex;
-		height: 100vh;
 	}
 
 	.bsuen-logo {
@@ -93,12 +87,16 @@ p {
 		z-index: 2;
 	}
 
-	.scrollable {
-		overflow-y: scroll;
+	.scroll-gradient {
+		background-image: linear-gradient(#fafca100, #fafca111 5%, #fafca1);
+		bottom: 30vh;
+		height: 30vh;
+		position: relative;
 	}
 
 	.text-container {
 		margin: calc(116px + 5vh) 10vw 10vh 10vw;
+		padding-bottom: 80px;
 	}
 
 	.video {
@@ -111,19 +109,22 @@ p {
 		right: 0;
 		top: 0;
 	}
-}
 
-@media only screen and (max-width: 800px) {
-	#desktop-video {
+	#background {
+		display: flex;
+		height: 100vh;
+	}
+
+	#mobile-video {
 		display: none;
 	}
 
-	.background {
-		display: block;
-		height: 100%;
+	#scrollable {
 		overflow-y: scroll;
 	}
+}
 
+@media only screen and (max-width: 800px) {
 	.bsuen-logo {
 		width: 25vw;
 	}
@@ -137,13 +138,28 @@ p {
 		top: calc(50vh - 60vw * 0.2265625);
 	}
 
+	.scroll-gradient {
+		display: none;
+	}
+
 	.text-container {
 		margin: 20vh 15vw 0;
+		padding-bottom: 40px;
 	}
 
 	.video-container {
 		margin: 0 -15vw;
 		width: 100vw;
+	}
+
+	#background {
+		display: block;
+		height: 100%;
+		overflow-y: scroll;
+	}
+
+	#desktop-video {
+		display: none;
 	}
 }
 
