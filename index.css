@@ -15,6 +15,7 @@ h1 {
 }
 
 h2 {
+	display: inline;
 	font-family: 'Bungee Inline', cursive;
 	font-size: 25px;
 }
@@ -40,6 +41,21 @@ p {
 	height: 30vh;
 }
 
+.see-video {
+	background-color: #600538;
+	border: none;
+	border-radius: 5px;
+	bottom: 3px;
+	display: inline;
+	margin-left: 20px;
+	position: relative;
+}
+
+.see-video p {
+	color: #fff;
+	margin: 0;
+}
+
 .text-container {
 	animation: fade-in 1s linear 1.5s 1 forwards;
 	opacity: 0;
@@ -52,11 +68,12 @@ p {
 }
 
 .video-container {
-	animation: blacken 1s linear 1.5s 1 forwards;
+	/*animation: blacken 1s linear 1.5s 1 forwards;*/
 	background-color: #fafca1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	max-width: 886px;
 }
 
 #background {
@@ -68,7 +85,7 @@ p {
 	height: 100%;
 }
 
-@media not screen and (max-width: 800px) {
+@media not screen and (max-width: 886px) {
 	body {
 		overflow-y: hidden;
 	}
@@ -91,6 +108,7 @@ p {
 		background-image: linear-gradient(#fafca100, #fafca111 5%, #fafca1);
 		bottom: 30vh;
 		height: 30vh;
+		pointer-events: none;
 		position: relative;
 	}
 
@@ -124,7 +142,7 @@ p {
 	}
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 886px) {
 	.bsuen-logo {
 		width: 25vw;
 	}
@@ -163,11 +181,11 @@ p {
 	}
 }
 
-@keyframes blacken {
+/*@keyframes blacken {
 	to {
 		background-color: black;
 	}
-}
+}*/
 
 @keyframes fade-in {
 	to {
