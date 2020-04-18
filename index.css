@@ -33,6 +33,10 @@ p {
 	line-height: 30px;
 }
 
+.app-store {
+	margin: 0 0 30px 30px;
+}
+
 .logo {
 	opacity: 0;
 }
